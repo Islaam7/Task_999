@@ -36,12 +36,12 @@ setInterval(() => {
 // ---------- المسارات الأساسية ----------
 
 // 🟢 اختبار السيرفر
-app.get("/", (req, res) => {
-  res.send("🚀 السيرفر يعمل بنجاح على http://localhost:3000");
-});
 // app.get("/", (req, res) => {
-//   res.sendFile(__dirname + "/public/index-multi.html");
+//   res.send("🚀 السيرفر يعمل بنجاح على http://localhost:3000");
 // });
+ app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index-multi.html");
+ });
 
 
 // 🟦 المرحلة 1: التحقق من الدخول
