@@ -10,10 +10,11 @@ app.use(express.static("public")); // مجلد يحتوي صفحات HTML
 
 // ---------- الاتصال بقاعدة البيانات ----------
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "training_platform"
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT
 });
 
 db.connect(err => {
